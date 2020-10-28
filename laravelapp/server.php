@@ -5,7 +5,7 @@
  *
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
- Master
+ Master2
  */
 
 $uri = urldecode(
