@@ -5,7 +5,7 @@
  *
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
- ecuserブランチで作業
+ Master
  */
 
 $uri = urldecode(
