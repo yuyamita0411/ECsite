@@ -5,7 +5,11 @@
  *
  * @package  Laravel
  * @author   Taylor Otwell <taylor@laravel.com>
+<<<<<<< HEAD
  Master2
+=======
+ ECuser
+>>>>>>> 2f57d55b39764371374a3da9da78af8375a0699c
  */
 
 $uri = urldecode(
