@@ -45,7 +45,7 @@ class Kernel extends HttpKernel
         ],
 
         'mypage' => [
-            \App\Http\Middleware\MypageMiddleware::class
+            \app\Http\Middleware\Mypagemiddleware::class
         ]
     ];
 

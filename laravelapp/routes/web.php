@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Middleware\MypageMiddleware;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,10 +12,8 @@ use App\Http\Middleware\MypageMiddleware;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+	return view('welcome');
 });
-//Route::get('mypage', 'MypageController@index')->middleware(MypageMiddleware::class);
-Route::get('mypage', 'MypageController@index')->middleware('mypage');
+Route::get('mypage', 'MypageController@index');
 Route::post('mypage', 'MypageController@formmethod')->middleware('mypage');
