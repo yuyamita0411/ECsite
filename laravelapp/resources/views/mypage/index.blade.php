@@ -13,23 +13,35 @@
 
 	<!--コンテンツ-->
 	<div>
-		<div class="content_textarea"></div>
+		<div class="content_textarea">
+			<p>{{$returnmsg}}</p>
+		</div>
 		<div class="content_formarea">
 			<form action="/mypage" method="post">
+				@csrf
 				<table>
 					<thead></thead>
 					<tbody>
 						<tr>
-							<th>お名前</th>
-							<td><input type="text" name="onamae"></td>
+							<th>ユーザー名</th>
+							<td><input type="text" name="username"></td>
+							@error('username')
+							<td>{{$message}}</td>
+							@enderror
 						</tr>
 						<tr>
 							<th>パスワード</th>
 							<td><input type="text" name="password"></td>
+							@error('password')
+							<td>{{$message}}</td>
+							@enderror
 						</tr>
 						<tr>
 							<th>年齢</th>
 							<td><input type="text" name="age"></td>
+							@error('age')
+							<td>{{$message}}</td>
+							@enderror
 						</tr>
 						<tr>
 							<th></th>

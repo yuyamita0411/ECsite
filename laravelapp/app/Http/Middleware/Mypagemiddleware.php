@@ -16,6 +16,12 @@ class Mypagemiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        $mergedata = [
+            'username' => '三田雄也',
+            'password' => 'rinel0411',
+            'age' => 28
+        ];
+        $request->merge(['mergedata' => $mergedata]);
         return $next($request);
     }
 }
