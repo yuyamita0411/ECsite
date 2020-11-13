@@ -17,5 +17,21 @@ use App\Http\Middleware\Mypagemiddleware;
 Route::get('/', function(){
 	return view('welcome');
 });
+
+/*Route::get('test', 'TestController@index');
+Route::post('test', 'TestController@formmethod');*/
+Route::get('test','AjaxController@index');
+Route::get('test/ajax','AjaxController@ajax');
+
+
+Route::get('register', 'RegisterpageController@index');
+Route::post('register', 'RegisterpageController@formmethod');
+
+Route::get('login', 'LoginpageController@index');
+Route::post('login', 'LoginpageController@formmethod');
+
 Route::get('mypage', 'MypageController@index');
 Route::post('mypage', 'MypageController@formmethod');
+
+Route::get('myschedule', 'MyscheduleController@index');
+Route::post('myschedule', 'MyscheduleController@formmethod');

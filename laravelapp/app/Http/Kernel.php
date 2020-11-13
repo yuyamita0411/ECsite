@@ -44,6 +44,10 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
+        'register' => [
+            \App\Http\Middleware\RegisterMiddleware::class
+        ],
+
         'mypage' => [
             \App\Http\Middleware\Mypagemiddleware::class
         ]
