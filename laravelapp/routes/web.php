@@ -17,6 +17,11 @@ use App\Http\Middleware\Mypagemiddleware;
 Route::get('/', function(){
 	return view('welcome');
 });
+
+Route::get('testurl', function(){
+	return view('testurl');
+});
+
 Route::get('mypage', 'MypageController@index');
 Route::post('mypage', 'MypageController@formmethod')->middleware('mypage');
 
