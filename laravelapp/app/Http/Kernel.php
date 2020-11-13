@@ -46,6 +46,9 @@ class Kernel extends HttpKernel
 
         'mypage' => [
             App\Http\Middleware\Mypagemiddleware::class
+
+        'register' => [
+            \App\Http\Middleware\RegisterMiddleware::class
         ]
     ];
 
