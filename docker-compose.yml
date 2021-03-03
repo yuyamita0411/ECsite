@@ -7,4 +7,4 @@ services:
       - ./app:/app
     tty: true
     ports:
-      - 3030:3030
+      - 3000:3000
