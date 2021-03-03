@@ -1,18 +1,35 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const app = express_1.default();
-const port = 3000;
-app.get('/', (req, res) => {
-    res.send('The sedulous hyena ate the antelope!');
-});
-app.listen(port, err => {
-    if (err) {
-        return console.error(err);
+const http = __importStar(require("http"));
+class Main {
+    constructor() {
+        // httpサーバーの設定をします。
+        const server = http.createServer((request, response) => this.requestHandler(request, response));
+        // サーバーを起動します。
+        server.listen('5000');
     }
-    return console.log(`server is listening on ${port}`);
-});
+    requestHandler(request, response) {
+        response.end("Hello! Node.js With TypeScript!");
+    }
+}
+const main = new Main();
 //# sourceMappingURL=index.js.map
